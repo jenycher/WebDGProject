@@ -1,5 +1,5 @@
 """
-URL configuration for zerocoder project.
+URL configuration for dzweb project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/dev/topics/http/urls/
@@ -14,12 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf import settings
-from django.conf.urls.static import static
+# dzweb/urls.py
+
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('', include('appweb.urls')),
+]
