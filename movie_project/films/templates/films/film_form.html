@@ -1,0 +1,12 @@
+{% extends 'films/layoute.html' %}
+
+{% block title %}Добавить фильм{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Добавить фильм</h1>
+<form method="post" class="needs-validation" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>
+{% endblock %}

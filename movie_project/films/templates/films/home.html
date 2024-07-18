@@ -1,0 +1,20 @@
+{% extends 'films/layoute.html' %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Добро пожаловать на сайт фильмов</h1>
+    <img src="{% static 'films/img/mir_kino.png' %}" alt="Мир Кино" class="img-fluid mt-4">
+    <p class="lead mt-4">
+    Перейдите к
+    <a href="{% url 'film_list' %}" class="font-weight-bold text-primary">списку фильмов</a>
+    или
+    <a href="{% url 'film_create' %}" class="font-weight-bold text-primary">добавьте новый фильм</a>.
+</p>
+</div>
+{% endblock %}
+
+
+
